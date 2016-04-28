@@ -1,0 +1,155 @@
+.footer {
+    background: url("../images/index/index.png") repeat-x scroll 0 -1429px transparent;
+    border-top: 1px solid #D9E2E7;
+    height: 36px;
+    line-height: 35px;
+    margin-top: 0;
+    text-align: center;
+} 
+.footer div{font-family:arial;}
+.copy-right em {
+    padding: 0 6px;
+}
+
+.weather {
+    background: url("../images/weather.png") no-repeat scroll 0 12px transparent;
+    padding: 0 15px 0 25px;
+    position: absolute;
+    right: 0;
+}
+.date-time {
+    background: url("../images/index/index.png") no-repeat scroll -15px -883px transparent;
+    padding: 0 10px 0 25px;
+    position: absolute;
+    right: 130px;
+}
+.copy-right {
+    padding-right: 20px;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    background: url("../images/index/index.png") repeat-x scroll center top transparent;
+    height: 70px;
+    position: relative;
+}
+ 
+.system-function {
+    padding-top: 4px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+}
+
+.system-function li {
+    float: left;
+    padding-left: 20px;
+}
+
+.system-btn ul{
+	position:absolute;
+	top:25px;
+	left:30%;
+}
+
+.system-btn ul li{float:left;padding:12px 0;}
+.system-btn ul li a{
+	font-size:14px;
+	color:white;
+	line-height: 21px;
+	display: inline-block;
+	width: 113px;
+	text-align: center;
+	background: url(../images/index/system_btn.png) no-repeat -10px -113px transparent;
+}
+
+.system-btn ul li a  em{padding-left:30px;background-image:url(../images/index/system_btn.png);background-repeat:no-repeat;background-color: transparent;}
+.system-btn ul li.B a em{background-position:5px -90px;}
+.system-btn ul li.C a em{background-position:5px -2px;}
+.system-btn ul li.D a em{background-position:5px -26px;}
+.system-btn ul li.E a em{background-position:5px -68px;}
+.system-btn ul li.F a em{background-position:5px -48px;}
+.system-btn ul li.XY400 a em{background-position:5px -92px;}
+.system-btn ul li.XY301 a em{background-position:5px -25px;}
+.system-btn ul li.XY303 a em{background-position:5px -48px;}
+.system-btn ul li.XY302 a em{background-position:5px -137px;}
+.system-btn ul li.XY545 a em{background-position:5px -70px;}
+.system-btn ul li.XY300 a em{background-position:5px -2px;}
+.system-btn ul li.hover{
+	background: url("../images/index/system_btn_hover.png") no-repeat scroll left top transparent;
+}
+
+.system-btn ul li.hover a,.system-btn ul li:hover a{
+	background:none;
+}
+
+.system-btn ul li:hover{
+	background: url("../images/index/system_btn_hover.png") no-repeat scroll left top transparent;
+}
+
+.main-icon.account {
+    background-position: 0 -230px;
+    font-family: Arial;
+}
+.main-icon {
+    color: #FFFFFF;
+} 
+.main-icon {
+    background: url("../images/index/index.png") no-repeat scroll left top transparent;
+    float: left;
+    line-height: 20px;
+    padding-left: 19px;
+}
+
+ 
+.main-icon.mgs {
+    background-position: 0 -260px;
+}
+.main-icon.unread {
+    background-position: -2px -1344px;
+}
+.main-icon.unread em {
+    color: #FFD200;
+}
+
+.main-icon.personal-setting {
+    background-position: 0 -290px;
+}
+.main-icon.help {
+    background-position: 0 -320px;
+}
+.main-icon.logout {
+    background-position: 0 -350px;
+}
+
+.logo h1 {
+    height: 55px;
+    top: 0px;
+    background: url("../images/index/logo.png") no-repeat scroll left top transparent;
+    left: 15px;
+    position: absolute;
+    text-indent: -5000em;
+    top: 8px;
+    width: 250px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+.alert .select{
+	padding: 0 5px 0 0;
+	background-position: right -24px;
+	outline: none;
+	text-decoration: none;
+	background: #e2e2e2;
+	color: #000000;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}

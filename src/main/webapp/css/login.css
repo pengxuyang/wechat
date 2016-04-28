@@ -1,0 +1,115 @@
+/*公共样式*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #434340;
+    font-family: "宋体";
+    font-size: 12px;
+    line-height: 22px;
+}
+.clear {
+    clear: both;
+}
+img {
+    border: 0 none;
+}
+a {
+    color: #797979;
+    font-size: 12px;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+/*样式*/
+body{background:#FDFDF8;}
+.bg{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	background:url(../images/login/bg.png) top center repeat;	
+	background-size:100% 100%;
+	-moz-background-size:100% 100%;
+}
+.dl_main{
+	width: 439px;
+	margin: 0 auto;
+	background: url(../images/login/dl.png) no-repeat;
+	background-position:center;
+	height: 321px;
+	padding: 200px 0 0 117px;
+	position: relative;
+	top: 10%;
+}
+.dl_main dl{
+	margin-top:15px;
+	width:306px;
+	height:32px;
+	border:1px solid #dcdcdc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.dl_main dl:lang(no){
+	border-color:#d71820;
+}
+
+.dl_main dl dt{
+	float:left;
+	width:16px;
+	height:16px;
+	background:url(../images/login_icon.png);
+	margin: 8px 0 0 8px;
+	display:inline;
+}
+.dl_main dl dt.psw_icon{
+	background-position:0 -16px;	
+}
+.dl_main dl dd{
+	width: 274px;
+	margin-left: 32px;
+}
+.dl_main input{
+	color: #605d5c;
+	border: none;
+	line-height: 24px;
+	padding: 4px 0;
+	width: 274px;
+	outline: none;
+	font-size: 16px;
+	font-family: "microsoft yahei",simhei;
+}
+.dl_main .validatecode{
+	width:104px;
+	height:32px;
+	outline:none;
+	border:1px solid #dcdcdc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 16px;
+	font-family: "microsoft yahei",simhei;
+	line-height: 24px;
+	padding: 4px 0 4px 5px;
+}
+.dl_main input.button_dl{
+	width:185px;
+	height:34px;
+	background:url(../images/login/login_btn.png);
+	cursor:pointer;
+	padding:0;
+}
+.dl_main input.button_dl:hover{
+	background-position:0 -35px;
+}
+.dl_main label{
+	font-size: 14px;
+	font-family: "microsoft yahei",simhei;
+	color:#605e5c;
+}
+
+
