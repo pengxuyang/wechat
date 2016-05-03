@@ -88,7 +88,8 @@ public class WechatController {
                Ticket = rootElement.element("Ticket").getTextTrim();
                 System.out.println("扫描二维码");
             }
-            String token ="cGgstHy98yfcI6R-rUIMTrv_mPcZtGDUgEkL_mhJKoOVR12R1dVoUcctl8eqSBZwuOhofc2eKyP59Ve_A1jkwJoESY8548yrMpI0EAjHjkoLJAiABAXVM";
+            String token ="cNFJIExca9ox8BeKGGA0LWg6sqSgQt5bV0OLgJSZrKxhmvbiaPDjx0Bg00UEic6sZssLfHegFMJHZAryJ3MFHIgvNEvrzBAnqoC5DXljBVB8N4-e3lGoAPuOdGvj8jlZALBcAEAQBR";
+           // String token ="cNFJIExca9ox8BeKGGA0LWg6sqSgQt5bV0OLgJSZrKxhmvbiaPDjx0Bg00UEic6sZssLfHegFMJHZAryJ3MFHIgvNEvrzBAnqoC5DXljBVB8N4-e3lGoAPuOdGvj8jlZALBcAEAQBR";
             String url =sendUrl+token;
             System.out.println(url);
             Map<String ,Object> para = new HashMap<>();

@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.amao</groupId>
-    <artifactId>ad2</artifactId>
+    <artifactId>wechat</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -182,7 +182,16 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.7</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.6.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -202,7 +211,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <warName>ROOT</warName>
+                    <warName>wechat</warName>
                 </configuration>
             </plugin>
            <!-- <plugin>-->
