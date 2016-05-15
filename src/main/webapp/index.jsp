@@ -9,8 +9,20 @@
 <html>
 <head>
     <title>扫描二维码</title>
+    <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 </head>
 <body style="text-align: center">
-    <img src="images/qrcode/K_CJ(9XR72EU$O37)%5DQXQMM.png">
+    <div id="login_container"></div>
+    <script type="text/javascript">
+        var obj = new WxLogin({
+            id:"login_container",
+            appid: "",
+            scope: "",
+            redirect_uri: "",
+            state: "",
+            style: "",
+            href: ""
+        });
+    </script>
 </body>
 </html>

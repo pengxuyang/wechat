@@ -1,6 +1,9 @@
 package com.amao.wechat.web.ctrl;
 
 import com.alibaba.fastjson.JSON;
+import com.amao.wechat.util.JsonUtil;
+import com.amao.wechat.util.SendRequestUtil;
+import com.amao.wechat.util.Token;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
@@ -23,6 +26,15 @@ import java.util.Map;
 @RequestMapping(value = "wechat")
 public class WechatController {
     private final static String sendUrl = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=";
+
+    private final static String getUserUrl = "https://api.weixin.qq.com/cgi-bin/user/info";
+
+    @RequestMapping("register")
+    public String login(HttpServletRequest request){
+        request.getParameter("");
+
+        return "register";
+    }
 
     @RequestMapping(value = "receive")
     @ResponseBody
@@ -85,15 +97,46 @@ public class WechatController {
                Ticket = rootElement.element("Ticket").getTextTrim();
                 System.out.println("扫描二维码");
             }
-            String token ="cNFJIExca9ox8BeKGGA0LWg6sqSgQt5bV0OLgJSZrKxhmvbiaPDjx0Bg00UEic6sZssLfHegFMJHZAryJ3MFHIgvNEvrzBAnqoC5DXljBVB8N4-e3lGoAPuOdGvj8jlZALBcAEAQBR";
-           // String token ="cNFJIExca9ox8BeKGGA0LWg6sqSgQt5bV0OLgJSZrKxhmvbiaPDjx0Bg00UEic6sZssLfHegFMJHZAryJ3MFHIgvNEvrzBAnqoC5DXljBVB8N4-e3lGoAPuOdGvj8jlZALBcAEAQBR";
+            String token = null;
+            try {
+                token = Token.returnToken();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            //通过获取的openId 获取用户的具体信息
+            String param = "access_token="+token+
+                           "&openid="+FromUserName+
+                           "&lang=zh_CN";
+            String userJson = SendRequestUtil.sendGet(getUserUrl,param);
+            Map<String,Object> userInfoMap = null;
+            try {
+                userInfoMap =   JsonUtil.jsonToMap(userJson);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
             String url =sendUrl+token;
             System.out.println(url);
             Map<String ,Object> para = new HashMap<>();
             para.put("touser",FromUserName);
             para.put("msgtype","text");
+
+
+
             Map<String,Object> content = new HashMap<>();
-            content.put("content","你好:"+FromUserName);
+            String sex ="先生";
+            if((userInfoMap.get("sex").toString().trim()).equals("1")){
+                sex ="先生";
+            }else{
+                sex="女士";
+            }
+            content.put("content","你好:"+userInfoMap.get("nickname").toString()+sex+",地址:"
+                                         +userInfoMap.get("country").toString()
+                    +userInfoMap.get("province").toString()
+                    +userInfoMap.get("city").toString()
+            );
             para.put("text",content);
             String json =  JSON.toJSONString(para);
             System.out.println(json);
@@ -114,6 +157,8 @@ public class WechatController {
             return echostr;
         }
     }
+
+
     /**
      * 向指定 URL 发送POST方法的请求
      *

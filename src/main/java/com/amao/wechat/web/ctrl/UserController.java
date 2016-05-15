@@ -30,7 +30,8 @@ public class UserController {
     @RequestMapping("index")
     public String userpage(){
 
-        return "user/list";
+       // return "user/list";
+      return "/user/list";
     }
 
     /*@RequestMapping("ajax")
